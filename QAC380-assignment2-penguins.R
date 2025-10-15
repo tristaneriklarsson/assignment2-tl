@@ -24,3 +24,9 @@ freq(penguins$year)
 penguin_subset
 cor_matrix <- cor(penguins[,c("bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g")])
 cor_matrix
+
+#Visualizations
+ggplot(data=penguins)+
+  stat_summary(aes(x=species, y=flipper_length_mm),
+               fun=mean, geom= "bar")
+
